@@ -1,59 +1,138 @@
 <template>
-  <div class="hello">
-    <h1>{{ msg }}</h1>
-    <p>
-      For a guide and recipes on how to configure / customize this project,<br>
-      check out the
-      <a href="https://cli.vuejs.org" target="_blank" rel="noopener">vue-cli documentation</a>.
-    </p>
-    <h3>Installed CLI Plugins</h3>
-    <ul>
-      <li><a href="https://github.com/vuejs/vue-cli/tree/dev/packages/%40vue/cli-plugin-babel" target="_blank" rel="noopener">babel</a></li>
-      <li><a href="https://github.com/vuejs/vue-cli/tree/dev/packages/%40vue/cli-plugin-router" target="_blank" rel="noopener">router</a></li>
-      <li><a href="https://github.com/vuejs/vue-cli/tree/dev/packages/%40vue/cli-plugin-eslint" target="_blank" rel="noopener">eslint</a></li>
-    </ul>
-    <h3>Essential Links</h3>
-    <ul>
-      <li><a href="https://vuejs.org" target="_blank" rel="noopener">Core Docs</a></li>
-      <li><a href="https://forum.vuejs.org" target="_blank" rel="noopener">Forum</a></li>
-      <li><a href="https://chat.vuejs.org" target="_blank" rel="noopener">Community Chat</a></li>
-      <li><a href="https://twitter.com/vuejs" target="_blank" rel="noopener">Twitter</a></li>
-      <li><a href="https://news.vuejs.org" target="_blank" rel="noopener">News</a></li>
-    </ul>
-    <h3>Ecosystem</h3>
-    <ul>
-      <li><a href="https://router.vuejs.org" target="_blank" rel="noopener">vue-router</a></li>
-      <li><a href="https://vuex.vuejs.org" target="_blank" rel="noopener">vuex</a></li>
-      <li><a href="https://github.com/vuejs/vue-devtools#vue-devtools" target="_blank" rel="noopener">vue-devtools</a></li>
-      <li><a href="https://vue-loader.vuejs.org" target="_blank" rel="noopener">vue-loader</a></li>
-      <li><a href="https://github.com/vuejs/awesome-vue" target="_blank" rel="noopener">awesome-vue</a></li>
-    </ul>
+
+
+
+  
+    <div class="row" style="height:auto; background-color: rgb(185, 185, 185);;">
+      <div class="row" style="height: 2px; background-color: rgb(0, 0, 0); margin-left: 0 !important;"></div>
+  
+  <div class="col-3" style="font-size:30px; font-weight: bold; margin-top: 20px; margin-bottom: 20px;"><input type="text" class="form-control"  v-model="bz1" required >
   </div>
-</template>
+  <div class="col-7" style="font-size:24px; font-weight: bold; margin-top: 20px; margin-bottom: 20px;"><input type="text" class="form-control"  v-model="bz2" required >
+     </div>
+  
+  
+  <div class="col-2" style="font-size:30px; font-weight: bold; margin-top: 20px; margin-bottom: 20px;">
+  <button class="btn btn-primary" @click="modifCrypto">MISE A JOUR</button>
+  </div>
+  <div class="row" style="height: 2px; background-color: rgb(0, 0, 0); margin-left: 0 !important;"></div>
+  </div>
 
-<script>
-export default {
-  name: 'HelloWorld',
-  props: {
-    msg: String
-  }
-}
-</script>
+  
 
-<!-- Add "scoped" attribute to limit CSS to this component only -->
-<style scoped>
-h3 {
-  margin: 40px 0 0;
-}
-ul {
-  list-style-type: none;
-  padding: 0;
-}
-li {
-  display: inline-block;
-  margin: 0 10px;
-}
-a {
-  color: #42b983;
-}
-</style>
+
+
+  <div class="row" style="height:auto; background-color: rgb(185, 185, 185);;">
+      <div class="row" style="height: 2px; background-color: rgb(0, 0, 0); margin-left: 0 !important;"></div>
+  
+  <div class="col-3" style="font-size:30px; font-weight: bold; margin-top: 20px; margin-bottom: 20px;"><input type="text" class="form-control"  v-model="bz3" required >
+
+  </div>
+  <div class="col-7" style="font-size:24px; font-weight: bold; margin-top: 20px; margin-bottom: 20px;"><input type="text" class="form-control"  v-model="bz4" required >
+     </div>
+  
+  
+  <div class="col-2" style="font-size:30px; font-weight: bold; margin-top: 20px; margin-bottom: 20px;">
+  <button class="btn btn-primary" @click="modifCrypto">MISE A JOUR</button>
+  </div>
+  <div class="row" style="height: 2px; background-color: rgb(0, 0, 0); margin-left: 0 !important;"></div>
+  </div>
+
+
+
+
+
+
+  <div class="row" style="height:auto; background-color: rgb(185, 185, 185);;">
+      <div class="row" style="height: 2px; background-color: rgb(0, 0, 0); margin-left: 0 !important;"></div>
+  
+  <div class="col-3" style="font-size:30px; font-weight: bold; margin-top: 20px; margin-bottom: 20px;"><input type="text" class="form-control"  v-model="bz5" required>
+
+  </div>
+  <div class="col-7" style="font-size:24px; font-weight: bold; margin-top: 20px; margin-bottom: 20px;"><input type="text" class="form-control"  v-model="bz6 " required >
+     </div>
+  
+  
+  <div class="col-2" style="font-size:30px; font-weight: bold; margin-top: 20px; margin-bottom: 20px;">
+  <button class="btn btn-primary" @click="modifCrypto">MISE A JOUR</button>
+  </div>
+  <div class="row" style="height: 2px; background-color: rgb(0, 0, 0); margin-left: 0 !important;"></div>
+  </div>
+
+  <div class="row" style="height:auto; background-color: rgb(185, 185, 185);;">
+      <div class="row" style="height: 2px; background-color: rgb(0, 0, 0); margin-left: 0 !important;"></div>
+  <div class="col-12" style="font-size:30px; font-weight: bold; margin-top: 20px; margin-bottom: 20px;">
+    <div style="text-align: center;">
+  <button class="btn btn-primary" @click="modifCrypto">Ajouter un champ</button>
+  </div>
+  </div>
+  <div class="row" style="height: 2px; background-color: rgb(0, 0, 0); margin-left: 0 !important;"></div>
+  </div>
+    
+  
+
+  
+    
+  </template>
+  
+  <script>
+  
+  //import axios from 'axios'
+  import { store } from "../store.js";
+  
+  export default {  
+    name: "CrytpoModif",
+  
+    props: {
+      crypto: Object,
+      
+    },
+  
+    data() {
+      return {
+        dataStore: store,
+       id:0,
+      libelle: "",
+      valeur: 0,
+
+      bz1:"Nom",
+      bz2:"Malenia",
+      bz3:"Histoire",
+      bz4:"Malénia est une sorcière puissante et mystérieuse, dont les origines sont enveloppées de secrets. Elle possède un pouvoir ancestral lié à la magie et à la manipulation des éléments. Au fil de l'histoire, les joueurs découvrent que Malénia a été emprisonnée pendant de nombreuses années par une force malveillante connue sous le nom de L'Annonceur.",
+      bz5:"Point de vie",
+      bz6:"71518489",
+
+      };
+    },
+  
+  mounted() {
+  // this.id = this.crypto.id
+  // this.libelle = this.crypto .libelle
+  // this.valeur = this.crypto.valeur
+  },
+  
+  methods: {
+      async modifCrypto() {
+  
+    //       axios.put('https://apitokendustry.alwaysdata.net/cryptoModif/' + this.crypto.id, {
+    //         libelle: this.libelle,
+    //         valeur: this.valeur
+    // })
+    // .then(response => {
+    //   alert("Mise à jour reussie !")
+    //   console.log(response.data);
+    // })
+    // .catch(error => {
+    //   alert("Erreur lors de la mise a jour !")
+    //   console.log(error);
+    // });
+  
+    this.$router.push('/BackOfficeCrypto')
+      },
+    },
+  
+  };
+  </script>
+  
+  
+   

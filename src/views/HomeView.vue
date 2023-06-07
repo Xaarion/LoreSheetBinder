@@ -1,34 +1,27 @@
 <template>
-  <div class="row" style="margin-right: 0 !important">
-    <div class="col-2" style="height: 800px; background-color: grey"></div>
-
-    <div class="col-10" style="padding-right: 0 !important">
-
-      <div v-for="currentcrypto in cryptos" :key="currentcrypto.id">
-
-        <div class="row" style="margin-right: 0 !important">
-
-          <CryptoLineInfo :crypto=currentcrypto></CryptoLineInfo>
-            
-        </div>
-        
-      </div>
-
+  <body>
+  <div class="row">
+    <div class="col-3"></div>    
+    <div class="col-6">
+    <OffreCreationForm/>
     </div>
+    <div class="col-3"></div>
   </div>
+</body>
+       
 </template>
 
 <script>
 // @ is an alias to /src
 
-import CryptoLineInfo from "@/components/CryptoLineInfo.vue";
+import OffreCreationForm from "@/components/OffreCreationForm.vue";
 import { store } from "../store.js";
 import axios from "axios";
 
 export default {
   name: "HomeView",
   components: {
-    CryptoLineInfo,
+    OffreCreationForm,
   },
 
   data() {

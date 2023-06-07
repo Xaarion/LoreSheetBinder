@@ -1,43 +1,76 @@
 <template>
-  <body>
-  <div class="row">
-    <div class="col-3"></div>    
-    <div class="col-6">
-    <OffreCreationForm/>
+  <div class="row" style="margin-right: 0 !important">
+      <div class="col-2" style="height: 800px; background-color: grey"></div>
+  
+      <div class="col-10" style="padding-right: 0 !important">
+  
+        
+  
+          <div class="row" style="margin-right: 0 !important">
+  
+            <CrytpoModif :crypto=currentcrypto></CrytpoModif>
+              
+          </div>
+          
+
+  
+      </div>
     </div>
-    <div class="col-3"></div>
-  </div>
-</body>
-       
-</template>
-          
-    <script>
-// @ is an alias to /src
-import OffreCreationForm from "@/components/OffreCreationForm.vue";
-import { store } from "../store.js";
-
-
-
-export default {
-  name: "CreationOffre",
-  components: {
-    OffreCreationForm,
-  },
-  data() {
-    return {
-      dataStore: store,
-      acces:0,   
-    };
-  },
-
+  </template>
+            
+      <script>
+  // @ is an alias to /src
+  import CrytpoModif from "@/components/CrytpoModif.vue";
+  import { store } from "../store.js";
+  //import axios from "axios";
+  
+  
+  export default {
+    name: "BackOfficeCrypto",
+    components: {
+      CrytpoModif,
+    },
+    data() {
+      return {
+        dataStore: store,
+        cryptos: [],
+        acces:0,
+      };
+    },
+  
   mounted() {
-    if(this.dataStore.data.acces < 1) {this.$router.push('/HomeView')}
-
+  
+    // this.verifAdmin();
+    // this.getCrypto();
+  
   },
-
-  methods: {
+  
+    methods: {
+    //   async getCrypto() {
+    //     await axios
+    //       .get("https://apitokendustry.alwaysdata.net/crypto")
+    //       .then((response) => {
+    //         this.cryptos = response.data;
+    //       });
+  
+  
+    //   },
+  
+    //   async verifAdmin() {
+  
+    //     console.log("bouh")
+    //           console.log(this.acces)
     
-  },
-};
-</script>
-          
+    //     await axios.get('https://apitokendustry.alwaysdata.net/connectID?identif='+ this.dataStore.data.ident + '&mdp=' + this.dataStore.data.mdp).then(response => {this.acces = response.data[0].acces})
+  
+    //     console.log(this.acces)
+  
+    //     if( this.acces < 3){
+    //       this.$router.push('/HomeView')
+  
+    //     }
+        
+    //   },
+    },
+  }
+  </script>

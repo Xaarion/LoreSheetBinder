@@ -1,7 +1,7 @@
 <template>
 
     <nav class="navbar navbar-expand-lg sticky-top navbar-dark bg-dark">
-            <span class="navbar-brand">VIE-IE-ED</span>
+            <span class="navbar-brand">LoreSheetBinder</span>
             <div class="collapse navbar-collapse" id="navbarNav">
                 <ul class="navbar-nav">z
                     <li class="nav-item">
@@ -13,40 +13,22 @@
                     </li>
 
                     <li class="nav-item">
-                      <router-link to="/HomeView" class="nav-link" v-if="dataStore.data.acces >= 1 ">Menu</router-link>
+                      <router-link to="/HomeView" class="nav-link" v-if="dataStore.data.acces >= 1 ">Recherche</router-link>
              
                     </li>
                     
                     <li class="nav-item">
-                      <router-link to="/CreationOffre" class="nav-link" v-if="dataStore.data.acces >= 1 ">CreationOffre</router-link>
+                      <router-link to="/CreationOffre" class="nav-link" v-if="dataStore.data.acces >= 1 ">Inventaire</router-link>
              
                     </li>
 
-                    <li class="nav-item">
-                      <router-link to="/OffreView" class="nav-link" v-if="dataStore.data.acces >= 1 ">Offres</router-link>
-             
-                    </li>
-
-                    <li class="nav-item">
-                      <router-link to="/BackOfficeCrypto" class="nav-link" v-if="dataStore.data.acces >= 3 ">BackOfficeCrypto</router-link>
-             
-                    </li>
-                    <li class="nav-item">
-                      <router-link to="/BackOfficeCreationCrypto" class="nav-link" v-if="dataStore.data.acces >= 3 ">BackOfficeCreationCrypto</router-link>
-             
-                    </li>
-
+                    
                     
                     
                 </ul>
                
             </div> 
             
-            <span class="navbar-text" style="margin-right: 50px;">
-                      
-                      Crédits : {{ dataStore.data.credits }}
-             
-                    </span>
         </nav>
         
   </template>

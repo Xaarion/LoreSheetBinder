@@ -11,12 +11,7 @@
                  <div class="form-group">
                    <label for="password">Entrez un mot de passe</label>
                    <input type="password" class="form-control" id="email" placeholder="Bokoblin256+" v-model="mdp">
-                 </div>
-
-                 <div class="form-group">
-                   <label for="pseudo">Entrez un nom pour votre compte (C'est celui ci que les gens verronts)</label>
-                   <input type="text" class="form-control" id="pseudo" placeholder="Gabi" v-model="pseudo">
-                 </div>       
+                 </div>   
                  
                  <div class="form-group">
                    <label for="email">Entrez votre adresse mail</label>
