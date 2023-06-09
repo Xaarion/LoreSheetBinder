@@ -8,7 +8,7 @@
   
           <div class="row" style="margin-right: 0 !important">
   
-            <CrytpoModif :crypto=currentcrypto></CrytpoModif>
+            <SheetInfo :crypto=currentcrypto></SheetInfo>
               
           </div>
           
@@ -20,15 +20,15 @@
             
       <script>
   // @ is an alias to /src
-  import CrytpoModif from "@/components/CrytpoModif.vue";
+  import SheetInfo from "@/components/SheetInfo.vue";
   import { store } from "../store.js";
   //import axios from "axios";
   
   
   export default {
-    name: "BackOfficeCrypto",
+    name: "InventareDeFiche",
     components: {
-      CrytpoModif,
+      SheetInfo,
     },
     data() {
       return {
