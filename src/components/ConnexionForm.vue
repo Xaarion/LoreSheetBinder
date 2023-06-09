@@ -11,6 +11,7 @@
             id="nom"
             placeholder="Gabriel"
             v-model="identif"
+            required
           />
         </div>
 
@@ -22,6 +23,7 @@
             id="mdp"
             placeholder="Bokoblin256+*"
             v-model="mdp"
+            required
           />
         </div>
       </fieldset>
@@ -35,7 +37,7 @@
 
 <script>
 import { store } from "../store.js";
-//import axios from "axios";
+import axios from "axios";
 
 export default {
   name: "ExportComp",
@@ -46,53 +48,54 @@ export default {
       identif: "",
       mdp: "",
       valid: 0,
-      acces: 0,
+      acces: 0, 
     };
   },
 
   methods: {
     async connekt() {
-      // this.dataStore.data.ident = this.identif;
-      // this.dataStore.data.mdp = this.mdp;
+      this.dataStore.data.ident = this.identif;
+      this.dataStore.data.mdp = this.mdp;
 
-      // const response = await axios
-      //   .get(
-      //     "https://apitokendustry.alwaysdata.net/connect?identif=" +
-      //       this.identif +
-      //       "&mdp=" +
-      //       this.mdp
-      //   )
-      //   this.valid = response.data[0].compteur
-      //   this.acces = response.data[0].acces
-      //   this.dataStore.data.id = response.data[0].id
-      // console.log(
-      //   "Le compte existe t'il ? (1 oui) (2 non)  --->  " + this.valid
-      // );
 
-      // if (this.valid == 1) {
-      //   console.log("Et son Id ?  --->  " + this.dataStore.data.id);
+      const response = await axios
+        .get(
+          "https://apiloresheetbinder.alwaysdata.net/connect?identif=" +
+            this.identif +
+            "&mdp=" +
+            this.mdp
+        )
+        this.valid = response.data[0].compteur
+        this.acces = response.data[0].acces
+        this.dataStore.data.id = response.data[0].id
+      console.log(
+        "Le compte existe t'il ? (1 oui) (0 non)  --->  " + this.valid
+      );
 
-      //   console.log("Quel est son niveau d'accès ?  --->  " + this.acces);
+      if (this.valid == 1) {
+        console.log("Et son Id ?  --->  " + this.dataStore.data.id);
 
-      // const resp2 = await axios
-      //     .get(
-      //       "https://apitokendustry.alwaysdata.net/credits?id=" +
-      //         this.dataStore.data.id
-      //     )
+        console.log("Quel est son niveau d'accès ?  --->  " + this.acces);
 
-      //     console.log(resp2);
+      const resp2 = await axios
+          .get(
+            "https://apitokendustry.alwaysdata.net/credits?id=" +
+              this.dataStore.data.id
+          )
 
-      //     this.dataStore.data.credits = resp2.data[0].credits;
+          console.log(resp2);
+
+          this.dataStore.data.credits = resp2.data[0].credits;
             
          
 
-      //   this.dataStore.data.acces = this.acces;
-      this.dataStore.data.acces = 3;
+        this.dataStore.data.acces = this.acces;
 
-       this.$router.push("/HomeView");
-      // } else {
-      //   console.log("Ce compte n'existe pas !");
-      // }
+
+       this.$router.push("/");
+      } else {
+        console.log("Ce compte n'existe pas !");
+      }
 
 
     },

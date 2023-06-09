@@ -1,56 +1,44 @@
 import { createRouter, createWebHashHistory } from 'vue-router'
-import HomeView from '../views/HomeView.vue'
+import PageView from '../views/PageView.vue'
+import InventairedeFiche from '../views/InventairedeFiche.vue'
 import InscriptionView from '../views/InscriptionView.vue'
+import FicheModif from '../views/FicheModif.vue'
+import ConsultScearchPage from '../views/ConsultScearchPage.vue'
 import ConnexionView from '../views/ConnexionView.vue'
-import BackOfficeCrypto from '../views/BackOfficeCrypto.vue'
-import BackOfficeCreationCrypto from '../views/BackOfficeCreationCrypto.vue'
-import CreationOffre from '../views/CreationOffre.vue'
-import OffreView from '../views/OffreView.vue'
+
 
 const routes = [
   {
-    path: '/OffreView',
-    name: 'OffreView',
-    component: OffreView
+    path: '/PageView',
+    name: 'PageView',
+    component: PageView
   },
   {
-    path: '/BackOfficeCrypto',
-    name: 'BackOfficeCrypto',
-    component: BackOfficeCrypto
+    path: '/InventairedeFiche',
+    name: 'InventairedeFiche',
+    component: InventairedeFiche
   },
   {
-    path: '/HomeView',
-    name: 'HomeView',
-    component: HomeView
-  },
-  {
-    path: '/BackOfficeCreationCrypto',
-    name: 'BackOfficeCreationCrypto',
-    component: BackOfficeCreationCrypto
-  },
-  {
-    path: '/CreationOffre',
-    name: 'CreationOffre',
-    component: CreationOffre
-  },
-  {
-    path: '/Inscription',
-    name: 'Inscription',
+    path: '/InscriptionView',
+    name: 'InscriptionView',
     component: InscriptionView
   },
   {
-    path: '/',
-    name: 'Connexion',
+    path: '/FicheModif',
+    name: 'FicheModif',
+    component: FicheModif
+  },
+  {
+    path: '/ConnexionView',
+    name: 'ConnexionView',
     component: ConnexionView
   },
   {
-    path: '/about',
-    name: 'about',
-    // route level code-splitting
-    // this generates a separate chunk (about.[hash].js) for this route
-    // which is lazy-loaded when the route is visited.
-    component: () => import(/* webpackChunkName: "about" */ '../views/AboutView.vue')
-  }
+    path: '/',
+    name: 'ConsultScearchPage',
+    component: ConsultScearchPage
+  },
+ 
 ]
 
 const router = createRouter({

@@ -11,7 +11,7 @@
 
 
 
-<div class="col-2" style="font-size:30px; font-weight: bold;">Création : 07/06/2023
+<div class="col-2" style="font-size:20px; font-weight: bold;">Création : 07/06/2023
    </div>
 
 <div class="col-2" style="font-size:30px; font-weight: bold;">
@@ -33,7 +33,7 @@
 
 
 
-<div class="col-2" style="font-size:30px; font-weight: bold;">Création : 06/06/2023
+<div class="col-2" style="font-size:20px; font-weight: bold;">Création : 06/06/2023
    </div>
 
 <div class="col-2" style="font-size:30px; font-weight: bold;">
@@ -54,7 +54,7 @@
 
 
 
-<div class="col-2" style="font-size:30px; font-weight: bold;">Création : 05 /06/2023
+<div class="col-2" style="font-size:20px; font-weight: bold;">Création : 05/06/2023
    </div>
 
 <div class="col-2" style="font-size:30px; font-weight: bold;">

@@ -69,7 +69,7 @@
 import { store } from "../store.js";
 
 export default {  
-  name: "CrytpoModif",
+  name: "PageView",
 
   props: {
     crypto: Object,

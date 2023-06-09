@@ -37,7 +37,6 @@ export default {
       dataStore: store,
       identif: "",
       mdp: "",
-      pseudo: "",
       mail: "",
       compteExiste : 0,
       id:0,
@@ -50,7 +49,7 @@ export default {
 
     this.compteExiste = 0
 
-    const response = await axios.get('https://apitokendustry.alwaysdata.net/antiDupliCompte?identif='+ this.identif + '&mail=' + this.mail)
+    const response = await axios.get('https://apiloresheetbinder.alwaysdata.net/antiDupliCompte?identif='+ this.identif + '&mail=' + this.mail)
       this.compteExiste = response.data[0].compteur
       console.log(response.data[0].compteur)
 
@@ -58,38 +57,16 @@ export default {
 if (this.compteExiste < 1){
 
 
-      const response2 = await axios.post('https://apitokendustry.alwaysdata.net/insc', {
+      const response2 = await axios.post('https://apiloresheetbinder.alwaysdata.net/insc', {
       identif: this.identif,
       mdp: this.mdp,
-      pseudo: this.pseudo,
       mail: this.mail
 })
 
   console.log(response2.data);
 
-
-
-
-  const response3 = await axios.get('https://apitokendustry.alwaysdata.net/connect?identif='+ 
-      this.identif+'&mdp='+this.mdp)
-
-          this.id = response3.data[0].id
-
-
-
-        const response4 = await axios.post('https://apitokendustry.alwaysdata.net/changeBalance', {
-      id: this.id,
-      credits: 1000
-})
-
-  console.log(response4.data);
-
-
-
-
-
 alert("Compte crée avec succès !");
-this.$router.push('/')
+this.$router.push('/ConnexionView')
 }
 
 else {

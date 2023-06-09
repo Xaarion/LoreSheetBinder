@@ -1,12 +1,12 @@
 <template>
-    <div style="margin-top: 60px;">
-             <h1 style="text-align: center; font-size: 100; font-weight: 550; margin-bottom: 40px;">Recherche de Fiche</h1>
+    <div style="margin-top: 100px;">
+             <h1 style="text-align: center; font-size: 80px; font-weight: 550; margin-bottom: 40px;">Recherche de Fiche</h1>
              <form>
                <fieldset>
                  
                  <div class="form-group" style="text-align: center;">
-                   <label for="password" style="margin-bottom: 20px;" >Entrez le code de la fiche que vous shouaitez voir !</label>
-                   <input type="text" class="form-control" id="email" placeholder="CODE" v-model="cryptoLibelle">
+                   <label for="password" style="margin-bottom: 20px; font-size:30px" >Entrez le code de la fiche que vous shouaitez voir !</label>
+                   <input type="text" class="form-control" id="email" placeholder="CODE" v-model="cryptoLibelle" style="background-color: grey; font-size: 20px;">
                  </div>
 
                  
@@ -14,7 +14,7 @@
               </fieldset>
               <div style="margin-bottom: 40px;"></div>
               <div style="text-align: center;">
-              <button type="button" class="btn btn-primary" style="margin: 0 auto;" @click="creationOffre">Consulter ! </button>
+              <button type="button" class="btn btn-primary" style="margin: 0 auto; font-size: 30px;" @click="creationOffre">Consulter ! </button>
             </div>
             </form>
          </div>

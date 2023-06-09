@@ -31,9 +31,7 @@ export default {
   },
 
   methods: {
-    recoisJson(payload) {
-      this.jsonToSend = payload.json;
-    },
+
   },
 };
 </script>

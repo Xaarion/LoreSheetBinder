@@ -5,20 +5,19 @@
             <div class="collapse navbar-collapse" id="navbarNav">
                 <ul class="navbar-nav">z
                     <li class="nav-item">
-                      <router-link to="/" class="nav-link" v-if="dataStore.data.acces < 1 ">Connexion</router-link>
+                      <router-link to="/ConnexionView" class="nav-link" v-if="dataStore.data.acces < 1 ">Connexion</router-link>
                     </li>
                     <li class="nav-item">
-                      <router-link to="/Inscription" class="nav-link" v-if="dataStore.data.acces < 1 ">Inscription</router-link>
+                      <router-link to="/InscriptionView" class="nav-link" v-if="dataStore.data.acces < 1 ">Inscription</router-link>
 
                     </li>
 
                     <li class="nav-item">
-                      <router-link to="/HomeView" class="nav-link" v-if="dataStore.data.acces >= 1 ">Recherche</router-link>
-             
+                      <router-link to="/" class="nav-link" v-if="dataStore.data.acces >= 1 ">Recherche</router-link>
                     </li>
                     
                     <li class="nav-item">
-                      <router-link to="/CreationOffre" class="nav-link" v-if="dataStore.data.acces >= 1 ">Inventaire</router-link>
+                      <router-link to="/InventairedeFiche" class="nav-link" v-if="dataStore.data.acces >= 1 ">Inventaire</router-link>
              
                     </li>
 
