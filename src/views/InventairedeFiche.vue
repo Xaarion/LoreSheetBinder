@@ -4,15 +4,15 @@
   
       <div class="col-10" style="padding-right: 0 !important">
   
-        
+        <div v-for="currentSheet in sheets" :key="currentSheet.id">
   
           <div class="row" style="margin-right: 0 !important">
   
-            <SheetInfo :crypto=currentcrypto></SheetInfo>
+            <SheetInfo :sheet=currentSheet></SheetInfo>
               
           </div>
           
-
+        </div>
   
       </div>
     </div>
@@ -22,7 +22,7 @@
   // @ is an alias to /src
   import SheetInfo from "@/components/SheetInfo.vue";
   import { store } from "../store.js";
-  //import axios from "axios";
+  import axios from "axios";
   
   
   export default {
@@ -33,34 +33,33 @@
     data() {
       return {
         dataStore: store,
-        cryptos: [],
+        sheets: [],
         acces:0,
       };
     },
   
   mounted() {
-  
-    // this.verifAdmin();
-    // this.getCrypto();
+    if(this.dataStore.data.acces < 1) {this.$router.push('/ConnexionView')}
+    // this.verifCo();
+    this.getSheet();
   
   },
   
     methods: {
-    //   async getCrypto() {
-    //     await axios
-    //       .get("https://apitokendustry.alwaysdata.net/crypto")
-    //       .then((response) => {
-    //         this.cryptos = response.data;
-    //       });
+      async getSheet() {
+        await axios
+          .get("https://apiloresheetbinder.alwaysdata.net/userSheet?id="+this.dataStore.data.id)
+          .then((response) => {
+            this.sheets = response.data;
+            console.log(response.data)
+          });
   
   
-    //   },
+      },
   
-    //   async verifAdmin() {
+    //   async verifCo() {
   
-    //     console.log("bouh")
-    //           console.log(this.acces)
-    
+
     //     await axios.get('https://apitokendustry.alwaysdata.net/connectID?identif='+ this.dataStore.data.ident + '&mdp=' + this.dataStore.data.mdp).then(response => {this.acces = response.data[0].acces})
   
     //     console.log(this.acces)

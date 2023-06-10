@@ -67,6 +67,7 @@ export default {
         )
         this.valid = response.data[0].compteur
         this.acces = response.data[0].acces
+        this.dataStore.data.acces = response.data[0].acces
         this.dataStore.data.id = response.data[0].id
       console.log(
         "Le compte existe t'il ? (1 oui) (0 non)  --->  " + this.valid
@@ -76,16 +77,6 @@ export default {
         console.log("Et son Id ?  --->  " + this.dataStore.data.id);
 
         console.log("Quel est son niveau d'accès ?  --->  " + this.acces);
-
-      const resp2 = await axios
-          .get(
-            "https://apitokendustry.alwaysdata.net/credits?id=" +
-              this.dataStore.data.id
-          )
-
-          console.log(resp2);
-
-          this.dataStore.data.credits = resp2.data[0].credits;
             
          
 

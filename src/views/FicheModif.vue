@@ -38,7 +38,7 @@
     },
   
   mounted() {
-  
+    if(this.dataStore.data.acces < 1) {this.$router.push('/ConnexionView')}
     // this.verifAdmin();
     // this.getCrypto();
   

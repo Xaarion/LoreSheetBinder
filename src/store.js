@@ -4,6 +4,7 @@ export const store = {
         ident: "identi",
         mdp: "fiant",
         acces: 0,
+        ficheConsulte : {},
 
     }
 }

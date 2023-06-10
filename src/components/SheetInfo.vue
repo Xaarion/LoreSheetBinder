@@ -4,15 +4,15 @@
 
 
   <div class="row" style="height: 80px;">
-<div class="col-3" style="font-size:25px; font-weight: bold;">Fiche : Malenia
+<div class="col-3" style="font-size:25px; font-weight: bold;">Fiche : {{ sheet.nom }}
 
 </div>
-<div class="col-5" style="font-size:22px; font-weight: bold;">Code : 9063b76f51a016a933443204930826bf
+<div class="col-5" style="font-size:22px; font-weight: bold;">Code : {{sheet.code}}
    </div>
 
 
 
-<div class="col-2" style="font-size:20px; font-weight: bold;">Création : 07/06/2023
+<div class="col-2" style="font-size:20px; font-weight: bold;">Création : {{sheet.dateCreation}}
    </div>
 
 <div class="col-2" style="font-size:30px; font-weight: bold;">
@@ -33,8 +33,7 @@ export default {
   name: "SheetInfo",
 
   props: {
-    crypto: Object,
-    
+    sheet: Object,
   },
 
   data() {
