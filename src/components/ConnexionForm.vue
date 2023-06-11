@@ -86,6 +86,7 @@ export default {
        this.$router.push("/");
       } else {
         console.log("Ce compte n'existe pas !");
+        alert("Ce compte n'existe pas !");
       }
 
 

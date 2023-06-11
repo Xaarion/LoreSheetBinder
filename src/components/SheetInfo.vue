@@ -16,7 +16,7 @@
    </div>
 
 <div class="col-2" style="font-size:30px; font-weight: bold;">
-<button class="btn btn-primary" @click="modifCrypto">MODIFIER</button>
+<button class="btn btn-primary" @click="goModifSheet">MODIFIER</button>
 </div>
 </div>
   <div class="row" style="height: 2px; background-color: red; margin-left: 0 !important;"></div>
@@ -46,28 +46,17 @@ export default {
   },
 
 mounted() {
-// this.id = this.crypto.id
-// this.libelle = this.crypto .libelle
-// this.valeur = this.crypto.valeur
+
 },
 
 methods: {
-    async modifCrypto() {
+    async goModifSheet() {
 
-  //       axios.put('https://apitokendustry.alwaysdata.net/cryptoModif/' + this.crypto.id, {
-  //         libelle: this.libelle,
-  //         valeur: this.valeur
-  // })
-  // .then(response => {
-  //   alert("Mise à jour reussie !")
-  //   console.log(response.data);
-  // })
-  // .catch(error => {
-  //   alert("Erreur lors de la mise a jour !")
-  //   console.log(error);
-  // });
+  this.$router.push('/FicheModif')
 
-  this.$router.push('/BackOfficeCrypto')
+  this.dataStore.data.ficheConsulte = this.sheet
+
+  console.log("CETTE FICHE ??? "+ this.dataStore.data.ficheConsulte.nom)
     },
   },
 
