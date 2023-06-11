@@ -12,6 +12,16 @@
     </div>
   
   </div>
+
+  <div class="row" style="height:auto; background-color: rgb(185, 185, 185);;">
+  <div class="row" style="height: 2px; background-color: rgb(0, 0, 0); margin-left: 0 !important;"></div>
+  <div class="col-12" style="font-size:30px; font-weight: bold; margin-top: 20px; margin-bottom: 20px;">
+  <div style="text-align: center;">
+  <button class="btn btn-primary" @click="newAttributes">Ajouter un champ</button>
+  </div>
+  </div>
+  <div class="row" style="height: 2px; background-color: rgb(0, 0, 0); margin-left: 0 !important;"></div>
+  </div>
   
   
   
@@ -53,6 +63,19 @@
           )
   
       },
+
+      async newAttributes() {
+      
+        const response = await axios.post('https://apiloresheetbinder.alwaysdata.net/newAttribute', {
+          libelle: "Nom du champ",
+          valeur: "Contenu du champ",
+          id_Fiches: this.dataStore.data.ficheConsulte.id,
+})
+
+  console.log(response.data);
+  this.getAttributes();
+
+    },
     },
   
   };
